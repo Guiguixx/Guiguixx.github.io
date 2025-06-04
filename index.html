@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Guillaume FINOT | Étudiant en BUT DACS</title>
+    <style>
+        :root {
+            --primary: #8B7355;
+            --secondary: #A0916B;
+            --accent: #D4B896;
+            --text: #4A4238;
+            --light: #F5F3F0;
+            --cream: #F8F6F2;
+            --dark-cream: #E8E3DB;
+            --brown: #6B5B47;
+            --border-radius: 12px;
+            --shadow: 0 6px 16px rgba(107, 91, 71, 0.15);
+            --transition: all 0.3s ease;
+
+            /* Couleurs pour les compétences */
+            --skill-system: #e74c3c;
+            --skill-security: #f39c12;
+            --skill-network: #3498db;
+            --skill-database: #2ecc71;
+            --skill-cloud: #9b59b6;
+            --skill-monitoring: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light) 50%, var(--dark-cream) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--cream);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--cream);
+            text-decoration: none;
+            font-family: 'Georgia', serif;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 20px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(248, 246, 242, 0.2);
+            transform: translateY(-2px);
+        }
+
+        main {
+            margin-top: 100px;
+            padding: 40px 0;
+        }
+
+        .hero {
+            background: var(--cream);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            padding: 80px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212,184,150,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 6px solid var(--accent);
+            object-fit: cover;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background: #e8e3db;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--brown);
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            border-color: var(--primary);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-family: 'Georgia', serif;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin-bottom: 25px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: var(--brown);
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--cream);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(139,115,85,0.3);
+        }
+
+        .btn-outline {
+            border: 3px solid var(--primary);
+            color: var(--primary);
+            background: var(--cream);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--cream);
+            transform: translateY(-4px);
+        }
+
+        .section {
+            background: var(--cream);
+            border-radius: var(--border-radius);
+            padding: 50px 40px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--accent);
+            font-family: 'Georgia', serif;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        /* Styles compétences générales */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            border-left: 5px solid;
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+        }
+
+        .skill-system     { background: linear-gradient(135deg, var(--skill-system), #c0392b); border-left-color: var(--skill-system); }
+        .skill-security   { background: linear-gradient(135deg, var(--skill-security), #d68910); border-left-color: var(--skill-security); }
+        .skill-network    { background: linear-gradient(135deg, var(--skill-network), #2980b9); border-left-color: var(--skill-network); }
+        .skill-database   { background: linear-gradient(135deg, var(--skill-database), #27ae60); border-left-color: var(--skill-database); }
+        .skill-cloud      { background: linear-gradient(135deg, var(--skill-cloud), #8e44ad); border-left-color: var(--skill-cloud); }
+        .skill-monitoring { background: linear-gradient(135deg, var(--skill-monitoring), #2c3e50); border-left-color: var(--skill-monitoring); }
+
+        .skill-category h3 {
+            color: white;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-family: 'Georgia', serif;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .skill-category p {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        /* Highlight temporaire */
+        .highlight {
+            box-shadow: 0 0 15px 3px yellow !important;
+        }
+
+        .timeline {
+            position: relative;
+            margin-top: 40px;
+            padding-left: 40px;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 12px rgba(107,91,71,0.1);
+            transition: var(--transition);
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: -50px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid var(--cream);
+            box-shadow: 0 0 0 4px var(--accent);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .timeline-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--brown);
+            font-family: 'Georgia', serif;
+        }
+
+        .timeline-company {
+            color: var(--secondary);
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* Onglets et contenus */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 15px 0;
+            text-align: center;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            color: var(--primary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .tab-button.active {
+            background: var(--primary);
+            color: var(--cream);
+            box-shadow: var(--shadow);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Style des blocs projets S1/S2 */
+        .project-section {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .project-section h4 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-family: 'Georgia', serif;
+        }
+
+        .project-section p {
+            margin-bottom: 15px;
+            color: var(--brown);
+        }
+
+        .comp-badge {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            border: 2px solid #fff;
+            transition: transform 0.2s ease;
+        }
+
+        .comp-badge:hover {
+            transform: scale(1.3);
+        }
+
+        .comp-label {
+            padding: 4px 8px;
+            border-radius: var(--border-radius);
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        /* Nouveau label info à côté, même style que comp-label */
+        .info-label {
+            padding: 4px 8px;
+            border-radius: var(--border-radius);
+            background-color: var(--primary);
+            color: #fff;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .info-label:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Modal popup compétence */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: var(--cream);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .modal-content h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--secondary);
+        }
+
+        .close-btn:hover {
+            color: var(--primary);
+        }
+
+        /* Modal info projet (même couleur charte) */
+        .info-modal .modal-content {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .info-modal h3 {
+            color: #fff !important;
+        }
+
+        .info-modal .close-btn {
+            color: #fff !important;
+        }
+
+        .contact {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--cream);
+            padding: 60px 40px;
+            border-radius: var(--border-radius);
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact .section-title {
+            color: var(--cream);
+            border-bottom-color: var(--accent);
+        }
+
+        .contact .section-title:after {
+            background: var(--cream);
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--cream);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid rgba(248,246,242,0.3);
+            border-radius: var(--border-radius);
+            background: rgba(248,246,242,0.1);
+            color: var(--cream);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-input::placeholder {
+            color: rgba(248,246,242,0.6);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(248,246,242,0.2);
+        }
+
+        .form-submit {
+            background: var(--cream);
+            color: var(--primary);
+            border: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            justify-self: start;
+        }
+
+        .form-submit:hover {
+            background: var(--accent);
+            color: var(--brown);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: var(--brown);
+            color: var(--cream);
+            padding: 50px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .social-icon {
+            background: rgba(248,246,242,0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid rgba(248,246,242,0.2);
+        }
+
+        .social-icon:hover {
+            background: var(--accent);
+            color: var(--brown);
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .footer-links {
+            margin-top: 30px;
+        }
+
+        .footer-links a {
+            color: rgba(248,246,242,0.7);
+            margin: 0 15px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--cream);
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 30px;
+            }
+
+            .timeline:before {
+                left: 15px;
+            }
+
+            .timeline-item:before {
+                left: -40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Guillaume FINOT</a>
+                <ul class="nav-links">
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#experience">Expérience</a></li>
+                    <li><a href="#formation">Formation</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="" class="btn btn-outline" target="_blank">Détails CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Section Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="profile-image">📸</div>
+                <h1>Guillaume FINOT</h1>
+                <h2>Étudiant en BUT DACS (IUT Informatique La Doua)</h2>
+                <p>Passionné par l'informatique et le réseau, je suis actuellement en deuxième année de BUT DACS (Déploiement d’Applications Communicantes et Sécurisées), et j’effectue ma deuxième et troisième année en alternance chez Koesio, un groupe français spécialisé dans les services numériques et l’assistance informatique aux entreprises.</p>
+                <div class="hero-buttons">
+                    <a href="#competences" class="btn btn-outline">Voir mes compétences</a>
+                    <a href="#contact" class="btn btn-primary">Me contacter</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Compétences -->
+        <section id="competences" class="section">
+            <h2 class="section-title">Mes Compétences</h2>
+            <p>Au cours de ma formation et de mon expérience en alternance, j'ai développé un ensemble de compétences essentielles pour mener à bien des projets informatiques et réseaux.</p>
+            <div class="skills-grid">
+                <div id="comp-Développer" class="skill-category skill-system">
+                    <h3>Développer</h3>
+                    <p>Concevoir, coder, tester et intégrer une solution informatique répondant aux besoins des clients, en utilisant des langages et frameworks adaptés.</p>
+                </div>
+                <div id="comp-Optimisation" class="skill-category skill-security">
+                    <h3>Optimisation</h3>
+                    <p>Proposer et implémenter des applications informatiques optimisées selon des critères tels que le temps d’exécution, la précision et la consommation des ressources.</p>
+                </div>
+                <div id="comp-Déploiement-Réseaux" class="skill-category skill-network">
+                    <h3>Déploiement Réseaux</h3>
+                    <p>Installer, configurer, mettre à disposition et maintenir en conditions opérationnelles des infrastructures, services et réseaux, en optimisant le système informatique de l’organisation.</p>
+                </div>
+                <div id="comp-Base-de-Données" class="skill-category skill-database">
+                    <h3>Base de Données</h3>
+                    <p>Concevoir, gérer, administrer et exploiter les données de l’entreprise afin de fournir toutes les informations nécessaires à un bon pilotage.</p>
+                </div>
+                <div id="comp-Recueil-de-Besoins" class="skill-category skill-cloud">
+                    <h3>Recueil de Besoins</h3>
+                    <p>Satisfaire les besoins des utilisateurs en analysant la chaîne de valeur du client, organiser et piloter un projet informatique avec des méthodes classiques ou agiles.</p>
+                </div>
+                <div id="comp-Travail-en-Équipe" class="skill-category skill-monitoring">
+                    <h3>Travail en Équipe</h3>
+                    <p>Développer et exploiter les aptitudes nécessaires pour travailler efficacement au sein d’une équipe informatique, en favorisant la communication et la collaboration.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Expérience -->
+        <section id="experience" class="section">
+            <h2 class="section-title">Expérience Professionnelle</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Présent</div>
+                    <div class="timeline-title">Alternant en Informatique</div>
+                    <div class="timeline-company">Koesio (Lyon, France)</div>
+                    <p>--------------------------------------------------</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Formation -->
+        <section id="formation" class="section">
+            <h2 class="section-title">Formation</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - Présent</div>
+                    <div class="timeline-title">BUT DACS (Déploiement d’Applications Communicantes et Sécurisées)</div>
+                    <div class="timeline-company">IUT Informatique La Doua (Villeurbanne, France)</div>
+                    <p>Programme axé sur le développement d’applications, la gestion de bases de données, la sécurité informatique et l’administration réseaux.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Projets -->
+        <section id="projets" class="section">
+            <h2 class="section-title">Projets</h2>
+
+            <!-- Onglets -->
+            <div class="tabs">
+                <div class="tab-button active" data-target="s1">S1</div>
+                <div class="tab-button" data-target="s2">S2</div>
+                <div class="tab-button" data-target="s3">S3</div>
+                <div class="tab-button" data-target="s4">S4</div>
+                <div class="tab-button" data-target="alternance">Alternance</div>
+            </div>
+
+            <!-- Contenu S1 (6 sections avec badge + label + info-label) -->
+            <div id="s1" class="tab-content active">
+                <h3>Projets Semestre 1</h3>
+                <div class="project-section" data-comp="Développer">
+                    <h4>
+                        Projet 1 – Implémentation d'un besoin client
+                        <span class="comp-badge" 
+                              data-comp="Développer" 
+                              style="background-color: var(--skill-system);" 
+                              title="Voir la compétence 'Développer'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-system);">Développer</span>
+                        <span class="info-label" title="Informations sur le projet">C</span>
+                        <span class="info-label" title="Informations sur le projet">Algorithme</span>
+                        <span class="info-label" title="Informations sur le projet">Communication</span>
+                        <span class="info-label" title="Informations sur le projet">Optimisation</span>
+                    </h4>
+                    <p>éveloppement d'une application en C de gestion de panneau d'affichage</p>
+                </div>
+                <div class="project-section" data-comp="Optimisation">
+                    <h4>
+                        Projet 2 – Comparaison d’approches algorithmiques
+                        <span class="comp-badge" 
+                              data-comp="Optimisation" 
+                              style="background-color: var(--skill-security);" 
+                              title="Voir la compétence 'Optimisation'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-security);">Optimisation</span>
+                        <span class="info-label" title="Informations sur le projet">Python</span>
+                        <span class="info-label" title="Informations sur le projet">Algorithme</span>
+                        <span class="info-label" title="Informations sur le projet">Communication</span>
+                        <span class="info-label" title="Informations sur le projet">Rédaction</span>
+                    </h4>
+                    <p>Développement d'un programme en python comparant les algorithmes de tri </p>
+                </div>
+                <div class="project-section" data-comp="Déploiement Réseaux">
+                    <h4>
+                        Projet 3 – Installation d’un poste pour le développement
+                        <span class="comp-badge" 
+                              data-comp="Déploiement Réseaux" 
+                              style="background-color: var(--skill-network);" 
+                              title="Voir la compétence 'Déploiement Réseaux'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                        <span class="info-label" title="Informations sur le projet">Bash</span>
+                        <span class="info-label" title="Informations sur le projet">Communication</span>
+                        <span class="info-label" title="Informations sur le projet">Recherche</span>
+                    </h4>
+                    <p>Fiche conseil pour postes selon des besoins spécifiques</p>
+                    <p>Création d'une VM simulant un poste client sur Ubuntu</p>
+                </div>
+                <div class="project-section" data-comp="Base de Données">
+                    <h4>
+                        Projet 4 – Création d’une base de données
+                        <span class="comp-badge" 
+                              data-comp="Base de Données" 
+                              style="background-color: var(--skill-database);" 
+                              title="Voir la compétence 'Base de Données'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-database);">Base de Données</span>
+                        <span class="info-label" title="Informations sur le projet">SQL</span>
+                        <span class="info-label" title="Informations sur le projet">MCD</span>
+
+                    </h4>
+                    <p>Base de données relationnel d'un cabinet de thérapie avec dépendances</p>
+                </div>
+                <div class="project-section" data-comp="Recueil de Besoins">
+                    <h4>
+                        Projet 5 – Recueil de besoins
+                        <span class="comp-badge" 
+                              data-comp="Recueil de Besoins" 
+                              style="background-color: var(--skill-cloud);" 
+                              title="Voir la compétence 'Recueil de Besoins'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de besoins</span>
+                        <span class="info-label" title="Informations sur le projet">Communication</span>
+                    </h4>
+                    <p>Création d'un site web pour la promotion de transport doux sur le campus de la Doua</p>
+                </div>
+                <div class="project-section" data-comp="Travail en Équipe">
+                    <h4>
+                        Projet 6 –  Découverte de l’environnement RSE
+                        <span class="comp-badge" 
+                              data-comp="Travail en Équipe" 
+                              style="background-color: var(--skill-monitoring);" 
+                              title="Voir la compétence 'Travail en Équipe'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-monitoring);">Travail en Équipe</span>
+                        <span class="info-label" title="Informations sur le projet">Recherches</span>
+                        <span class="info-label" title="Informations sur le projet">Synthèse</span>
+                    </h4>
+                    <p>Etude de la stratégie RSE de Dassault Aviation</p>
+                </div>
+            </div>
+
+            <!-- Contenu S2 (6 sections avec badge + label + info-label) -->
+            <div id="s2" class="tab-content">
+                <h3>Projets Semestre 2</h3>
+                <div class="project-section" data-comp="Développer">
+                    <h4>
+                        Projet 1 – Développement d’une application / Exploration algorithmique d’un problème
+                        <span class="comp-badge" 
+                              data-comp="Développer" 
+                              style="background-color: var(--skill-system);" 
+                              title="Voir la compétence 'Développer'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-system);">Développer</span>
+                        <span class="comp-label" style="background-color: var(--skill-security);">Optimisation</span>
+                        <span class="info-label" title="Informations sur le projet">Développer</span>
+                        <span class="info-label" title="Informations sur le projet">Optimisation</span>
+                    </h4>
+                    <p>Developpement d'un application Java sur la gestion de vols au sein de la France avec interface IHM</p>
+                    <p>Optimisaton et implémentation d'algorithme de graphe pour la gestion de collision des avions</p>
+                </div>
+                <div class="project-section" data-comp="Déploiement Réseaux">
+                    <h4>
+                        Projet 2 – Installation d'un service réseau
+                        <span class="comp-badge" 
+                              data-comp="Déploiement Réseaux" 
+                              style="background-color: var(--skill-network);" 
+                              title="Voir la compétence 'Déploiement Réseaux'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                        <span class="info-label" title="Informations sur le projet">Cisco</span>
+                        <span class="info-label" title="Informations sur le projet">Adressage IP</span>
+                        <span class="info-label" title="Informations sur le projet">Rédaction</span>
+                    </h4>
+                    <p>Rédaction d'une fiche technique pour déplooyer un serveur Apache2 et Nginx</p>
+                    <p>Infrastructure réseau complète, configuration de switch et de Routeurs</p>
+                </div>
+                <div class="project-section" data-comp="Base de Données">
+                    <h4>
+                        Projet 3 – Exploitation d’une base de données
+                        <span class="comp-badge" 
+                              data-comp="Base de Données" 
+                              style="background-color: var(--skill-database);" 
+                              title="Voir la compétence 'Base de Données'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-database);">Base de Données</span>
+                        <span class="info-label" title="Informations sur le projet">Power BI</span>
+                        <span class="info-label" title="Informations sur le projet">Base de données</span>
+                        <span class="info-label" title="Informations sur le projet">Exploitation de données</span>
+                    </h4>
+                    <p>Exploitation d'une base de données pour extraire des shéma utile pour l'exploitation commerciale d'une entreprise</p>
+                </div>
+                <div class="project-section" data-comp="Recueil de Besoins">
+                    <h4>
+                        Projet 5 – Gestion d'un projet
+                        <span class="comp-badge" 
+                              data-comp="Recueil de Besoins" 
+                              style="background-color: var(--skill-cloud);" 
+                              title="Voir la compétence 'Recueil de Besoins'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
+                        <span class="info-label" title="Informations sur le projet">Recherche</span>
+                        <span class="info-label" title="Informations sur le projet">Rédaction</span>
+                    </h4>
+                    <p>Rédaction d'un cahier des charges et gestion des objectifs SMART, GANTT, matrice RACI</p>
+                </div>
+                <!--
+                <div class="project-section" data-comp="Travail en Équipe">
+                    <h4>
+                        Projet 6 – Section Travail en Équipe
+                        <span class="comp-badge" 
+                              data-comp="Travail en Équipe" 
+                              style="background-color: var(--skill-monitoring);" 
+                              title="Voir la compétence 'Travail en Équipe'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-monitoring);">Travail en Équipe</span>
+                        <span class="info-label" title="Informations sur le projet">Info</span>
+                    </h4>
+                    <p>Coordination d’une équipe de 4 pour un projet d’application interne.</p>
+                </div>
+                -->
+            </div>
+
+            <!-- Contenu S3 -->
+            <div id="s3" class="tab-content">
+                <h3>Projets Semestre 3</h3>
+                <div class="project-section" data-comp="Travail en Équipe">
+                    <h4>
+                        Projet 1 – Création et déploiement de services applicatifs
+                        <span class="comp-badge" 
+                              data-comp="Travail en Équipe" 
+                              style="background-color: var(--skill-monitoring);" 
+                              title="Voir la compétence 'Travail en Équipe'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-system);">Développer</span>
+                        <span class="comp-label" style="background-color: var(--skill-security);">Optimisation</span>
+                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                        <span class="comp-label" style="background-color: var(--skill-database);">Base de Données</span>
+                        <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
+                        <span class="comp-label" style="background-color: var(--skill-monitoring);">Travail en Équipe</span>
+                        <span class="info-label" title="Informations sur le projet">Hping3</span>
+                        <span class="info-label" title="Informations sur le projet">Dos</span>
+
+                    </h4>
+                    <p>Test et compréhension des sécurité utiliser contre le DOS sur un serveur Apache2</p>
+                </div>
+            </div>
+
+            <!-- Contenu S4 -->
+            <div id="s4" class="tab-content">
+                <h3>Projets Semestre 4</h3>
+                <div class="project-section" data-comp="Travail en Équipe">
+                    <h4>
+                        Projet 1 – Déployer et sécuriser des services dans un réseau
+                        <span class="comp-badge" 
+                              data-comp="Travail en Équipe" 
+                              style="background-color: var(--skill-monitoring);" 
+                              title="Voir la compétence 'Travail en Équipe'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-system);">Développer</span>
+                        <span class="comp-label" style="background-color: var(--skill-security);">Optimisation</span>
+                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                        <span class="comp-label" style="background-color: var(--skill-database);">Base de Données</span>
+                        <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
+                        <span class="comp-label" style="background-color: var(--skill-monitoring);">Travail en Équipe</span>
+                        <span class="info-label" title="Informations sur le projet">Docker</span>
+                        <span class="info-label" title="Informations sur le projet">Docker swarm</span>
+                        <span class="info-label" title="Informations sur le projet">Recherche</span>
+
+                    </h4>
+                    <p>Mise en place d'un DOcker Swarm (1 manager et 2 worker) afin de déployer un service</p>
+                    <p>Réalisatoin d'un Wireshark WEB grace a des docker compose</p>
+                </div>
+            </div>
+
+            <!-- Contenu Alternance -->
+            <div id="alternance" class="tab-content">
+                <h3>Projets en Alternance</h3>
+                <div class="project-section" data-comp="Travail en Équipe">
+                    <h4>
+                        Projet 1 – Création d'un parc informatique virtuel
+                        <span class="comp-badge" 
+                              data-comp="Travail en Équipe" 
+                              style="background-color: var(--skill-monitoring);" 
+                              title="Voir la compétence 'Travail en Équipe'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-security);">Optimisation</span>
+                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                        <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
+                        <span class="comp-label" style="background-color: var(--skill-monitoring);">Travail en Équipe</span>
+                        <span class="info-label" title="Informations sur le projet">Windows serveur</span>
+                        <span class="info-label" title="Informations sur le projet">Pare feu</span>
+                        <span class="info-label" title="Informations sur le projet">Active Directory</span>
+
+                    </h4>
+                    <p>Réalisatoin d'un parc Informatique virtuel</p>
+                    <p>Configuration d'un iDRAC</p>
+                    <p>Boot d'un serveur Windows depuis son iDRAC</p>
+                    <p>Mise en place de role : DC, DHCP, DNS</p>
+                    <p>Création de VLAN</p>
+                    <p>Création d'un serveur Web dans une DMZ avec règle de NAT pour redirection</p>
+                </div> 
+                <div class="project-section" data-comp="Travail en Équipe">
+                    <h4>
+                        Ticketing
+                        <span class="comp-badge" 
+                              data-comp="Travail en Équipe" 
+                              style="background-color: var(--skill-monitoring);" 
+                              title="Voir la compétence 'Travail en Équipe'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                        <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
+                        <span class="comp-label" style="background-color: var(--skill-monitoring);">Travail en Équipe</span>
+                        <span class="info-label" title="Informations sur le projet">Recherche</span>
+                        <span class="info-label" title="Informations sur le projet">Organisation</span>
+                        <span class="info-label" title="Informations sur le projet">Professionnalisme</span>
+
+                    </h4>
+                    <p>Gestion de ticket client sur les infrastructure Réseau et Système</p>
+                </div>
+                <div class="project-section" data-comp="Travail en Équipe">
+                    <h4>
+                        Préparation de poste informatique
+                        <span class="comp-badge" 
+                              data-comp="Travail en Équipe" 
+                              style="background-color: var(--skill-monitoring);" 
+                              title="Voir la compétence 'Travail en Équipe'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                        <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
+                        <span class="info-label" title="Informations sur le projet">Recherche</span>
+                        <span class="info-label" title="Informations sur le projet">Organisation</span>
+                        <span class="info-label" title="Informations sur le projet">Professionnalisme</span>
+
+                    </h4>
+                    <p>Préparation de poste informatique prêt à l'emploie</p>
+                </div>              
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact</h2>
+            <p>Pour toute demande de renseignements ou collaboration, n’hésitez pas à me contacter via le formulaire ci-dessous ou à consulter mon profil LinkedIn et mon CV.</p>
+            <div class="contact-form">
+                <div class="form-group full-width">
+                    <label for="nom" class="form-label">Nom</label>
+                    <input type="text" id="nom" class="form-input" placeholder="Votre nom complet"/>
+                </div>
+                <div class="form-group full-width">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-input" placeholder="Votre adresse email"/>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" rows="6" class="form-input" placeholder="Votre message"></textarea>
+                </div>
+                <button type="submit" class="form-submit">Envoyer</button>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/guillaume-finot-83a122293/" target="_blank" class="social-icon">in</a>
+                <a href="https://math1758.github.io/" target="_blank" class="social-icon">CV</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal compétence -->
+    <div id="comp-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h3 id="comp-text">Compétence validée :</h3>
+        </div>
+    </div>
+
+    <!-- Modal info projet (même couleur charte) -->
+    <div id="info-modal" class="modal info-modal">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h3>Détails du projet</h3>
+            <p>Informations complémentaires sur le projet seront affichées ici.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Guillaume FINOT. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="https://math1758.github.io/" target="_blank">Mon CV</a>
+            <a href="https://www.linkedin.com/in/guillaume-finot-83a122293/" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion des onglets
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                button.classList.add('active');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+
+        // Mapping des compétences à leurs couleurs CSS
+        const compColors = {
+            "Développer": getComputedStyle(document.documentElement).getPropertyValue('--skill-system').trim(),
+            "Optimisation": getComputedStyle(document.documentElement).getPropertyValue('--skill-security').trim(),
+            "Déploiement Réseaux": getComputedStyle(document.documentElement).getPropertyValue('--skill-network').trim(),
+            "Base de Données": getComputedStyle(document.documentElement).getPropertyValue('--skill-database').trim(),
+            "Recueil de Besoins": getComputedStyle(document.documentElement).getPropertyValue('--skill-cloud').trim(),
+            "Travail en Équipe": getComputedStyle(document.documentElement).getPropertyValue('--skill-monitoring').trim()
+        };
+
+        // Gestion du modal de compétence
+        const compModal = document.getElementById('comp-modal');
+        const compContent = compModal.querySelector('.modal-content');
+        const compText = document.getElementById('comp-text');
+        const compClose = compModal.querySelector('.close-btn');
+
+        document.querySelectorAll('.comp-badge').forEach(badge => {
+            badge.addEventListener('click', () => {
+                const comp = badge.getAttribute('data-comp');
+                const color = compColors[comp] || 'var(--primary)';
+                const compId = 'comp-' + comp.replace(/ /g, '-');
+
+                // Ajuster le style du modal selon la couleur de la compétence
+                compContent.style.backgroundColor = color;
+                compContent.style.color = '#fff';
+                compContent.querySelector('h3').style.color = '#fff';
+                compClose.style.color = '#fff';
+
+                compText.textContent = `Compétence validée : ${comp}`;
+                compModal.style.display = 'flex';
+
+                // Faire défiler vers la section compétence correspondante
+                const compElem = document.getElementById(compId);
+                if (compElem) {
+                    compElem.scrollIntoView({behavior: 'smooth', block: 'center'});
+                    compElem.classList.add('highlight');
+                    setTimeout(() => compElem.classList.remove('highlight'), 3000);
+                }
+            });
+        });
+
+        compClose.addEventListener('click', () => {
+            compModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === compModal) {
+                compModal.style.display = 'none';
+            }
+        });
+
+        // Gestion du modal info projet
+        const infoModal = document.getElementById('info-modal');
+        const infoClose = infoModal.querySelector('.close-btn');
+
+        document.querySelectorAll('.info-label').forEach(label => {
+            label.addEventListener('click', () => {
+                infoModal.style.display = 'flex';
+            });
+        });
+
+        infoClose.addEventListener('click', () => {
+            infoModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === infoModal) {
+                infoModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
