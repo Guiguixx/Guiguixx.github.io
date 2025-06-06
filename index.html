@@ -472,6 +472,15 @@
             transform: translateY(-2px);
         }
 
+        /* Style pour l’icône de téléchargement PDF */
+        .pdf-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+
         /* Modal popup compétence */
         .modal {
             display: none;
@@ -722,7 +731,9 @@
                     <li><a href="#formation">Formation</a></li>
                     <li><a href="#projets">Projets</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="" class="btn btn-outline" target="_blank">Détails CV</a></li>
+                    <li>
+                        <a href="CV Guillaume Finot Alternance Informatique 2.pdf" download class="btn btn-outline">Détails CV</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -733,14 +744,14 @@
         <section class="hero">
             <div class="hero-content">
                 <!-- Balise img pointant vers le fichier à la racine du dépôt -->
-                <img src="guillaume_finot.jpg" alt="Portrait de Guillaume FINOT" class="profile-image" />
+                <img src="img/guillaume_finot.jpg" alt="Portrait de Guillaume FINOT" class="profile-image" />
                 <h1>Guillaume FINOT</h1>
                 <h2>Étudiant en BUT DACS (IUT Informatique La Doua)</h2>
                 <p>
-                    Passionné par l'informatique et le réseau, je suis actuellement en deuxième année 
-                    de BUT DACS (Déploiement d’Applications Communicantes et Sécurisées), et j’effectue 
-                    ma deuxième et troisième année en alternance chez Koesio, un groupe français spécialisé 
-                    dans les services numériques et l’assistance informatique aux entreprises.
+                    Actuellement en deuxième année de BUT DACS (Déploiement d’Applications Communicantes et Sécurisées), 
+                    j’effectue ma formation en alternance chez Koesio, un groupe français spécialisé dans les services 
+                    numériques et l’assistance informatique aux entreprises, ce qui me permet de consolider mes 
+                    compétences en informatique et en réseaux.
                 </p>
                 <div class="hero-buttons">
                     <a href="#competences" class="btn btn-outline">Voir mes compétences</a>
@@ -756,27 +767,33 @@
             <div class="skills-grid">
                 <div id="comp-Développer" class="skill-category skill-system">
                     <h3>Développer</h3>
-                    <p>Concevoir, coder, tester et intégrer une solution informatique répondant aux besoins des clients, en utilisant des langages et frameworks adaptés.</p>
+                    <p>Concevoir, coder, tester et intégrer une solution informatique répondant aux besoins des clients, 
+                        en utilisant des langages et frameworks adaptés.</p>
                 </div>
                 <div id="comp-Optimisation" class="skill-category skill-security">
                     <h3>Optimisation</h3>
-                    <p>Proposer et implémenter des applications informatiques optimisées selon des critères tels que le temps d’exécution, la précision et la consommation des ressources.</p>
+                    <p>Proposer et implémenter des applications informatiques optimisées selon des critères tels que le 
+                        temps d’exécution, la précision et la consommation des ressources.</p>
                 </div>
                 <div id="comp-Déploiement-Réseaux" class="skill-category skill-network">
                     <h3>Déploiement Réseaux</h3>
-                    <p>Installer, configurer, mettre à disposition et maintenir en conditions opérationnelles des infrastructures, services et réseaux, en optimisant le système informatique de l’organisation.</p>
+                    <p>Installer, configurer, mettre à disposition et maintenir en conditions opérationnelles des 
+                        infrastructures, services et réseaux, en optimisant le système informatique de l’organisation.</p>
                 </div>
                 <div id="comp-Base-de-Données" class="skill-category skill-database">
                     <h3>Base de Données</h3>
-                    <p>Concevoir, gérer, administrer et exploiter les données de l’entreprise afin de fournir toutes les informations nécessaires à un bon pilotage.</p>
+                    <p>Concevoir, gérer, administrer et exploiter les données de l’entreprise afin de fournir toutes 
+                        les informations nécessaires à un bon pilotage.</p>
                 </div>
                 <div id="comp-Recueil-de-Besoins" class="skill-category skill-cloud">
                     <h3>Recueil de Besoins</h3>
-                    <p>Satisfaire les besoins des utilisateurs en analysant la chaîne de valeur du client, organiser et piloter un projet informatique avec des méthodes classiques ou agiles.</p>
+                    <p>Satisfaire les besoins des utilisateurs en analysant la chaîne de valeur du client, organiser 
+                        et piloter un projet informatique avec des méthodes classiques ou agiles.</p>
                 </div>
                 <div id="comp-Travail-en-Équipe" class="skill-category skill-monitoring">
                     <h3>Travail en Équipe</h3>
-                    <p>Développer et exploiter les aptitudes nécessaires pour travailler efficacement au sein d’une équipe informatique, en favorisant la communication et la collaboration.</p>
+                    <p>Développer et exploiter les aptitudes nécessaires pour travailler efficacement au sein 
+                        d’une équipe informatique, en favorisant la communication et la collaboration.</p>
                 </div>
             </div>
         </section>
@@ -786,7 +803,7 @@
             <h2 class="section-title">Formation</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">2022 - Présent</div>
+                    <div class="timeline-date">2023 - Présent</div>
                     <div class="timeline-title">BUT DACS (Déploiement d’Applications Communicantes et Sécurisées)</div>
                     <div class="timeline-company">IUT Informatique La Doua (Villeurbanne, France)</div>
                     <p>Programme axé sur l'administration réseau et système d'infrastructures</p>
@@ -799,7 +816,7 @@
             <h2 class="section-title">Expérience Professionnelle</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">2023 - Présent</div>
+                    <div class="timeline-date">2024 - Présent</div>
                     <div class="timeline-title">Alternant en Informatique</div>
                     <div class="timeline-company">Koesio (Lyon, France)</div>
                     <p>Support technique dans la maintenance d'infrastructure réseau et système à distance</p>
@@ -820,12 +837,15 @@
                 <div class="tab-button" data-target="alternance">Alternance</div>
             </div>
 
-            <!-- Contenu S1 (6 sections avec badge + label + info-label) -->
+            <!-- Contenu S1 (6 sections avec badge + label + info-label + icône de téléchargement) -->
             <div id="s1" class="tab-content active">
                 <h3>Projets Semestre 1</h3>
                 <div class="project-section" data-comp="Développer">
                     <h4>
                         Projet 1 – Implémentation d'un besoin client
+                        <a href="" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Développer" 
                               style="background-color: var(--skill-system);" 
@@ -837,11 +857,14 @@
                         <span class="info-label" title="Informations sur le projet">Communication</span>
                         <span class="info-label" title="Informations sur le projet">Optimisation</span>
                     </h4>
-                    <p>éveloppement d'une application en C de gestion de panneau d'affichage</p>
+                    <p>Développement d'une application en C de gestion de panneau d'affichage</p>
                 </div>
                 <div class="project-section" data-comp="Optimisation">
                     <h4>
                         Projet 2 – Comparaison d’approches algorithmiques
+                        <a href="S1/Compte_Rendu_Algorithmique_SAE.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Optimisation" 
                               style="background-color: var(--skill-security);" 
@@ -853,11 +876,14 @@
                         <span class="info-label" title="Informations sur le projet">Communication</span>
                         <span class="info-label" title="Informations sur le projet">Rédaction</span>
                     </h4>
-                    <p>Développement d'un programme en python comparant les algorithmes de tri </p>
+                    <p>Développement d'un programme en Python comparant les algorithmes de tri</p>
                 </div>
                 <div class="project-section" data-comp="Déploiement Réseaux">
                     <h4>
                         Projet 3 – Installation d’un poste pour le développement
+                        <a href="S1/ConfigurationFinal.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Déploiement Réseaux" 
                               style="background-color: var(--skill-network);" 
@@ -874,6 +900,9 @@
                 <div class="project-section" data-comp="Base de Données">
                     <h4>
                         Projet 4 – Création d’une base de données
+                        <a href="S1/RAZA_FINOT_SAEBD.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Base de Données" 
                               style="background-color: var(--skill-database);" 
@@ -882,26 +911,31 @@
                         <span class="comp-label" style="background-color: var(--skill-database);">Base de Données</span>
                         <span class="info-label" title="Informations sur le projet">SQL</span>
                         <span class="info-label" title="Informations sur le projet">MCD</span>
-
                     </h4>
-                    <p>Base de données relationnel d'un cabinet de thérapie avec dépendances</p>
+                    <p>Base de données relationnelle d'un cabinet de thérapie avec dépendances</p>
                 </div>
                 <div class="project-section" data-comp="Recueil de Besoins">
                     <h4>
                         Projet 5 – Recueil de besoins
+                        <a href="docs/projet5_s1.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Recueil de Besoins" 
                               style="background-color: var(--skill-cloud);" 
                               title="Voir la compétence 'Recueil de Besoins'">
                         </span>
-                        <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de besoins</span>
+                        <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
                         <span class="info-label" title="Informations sur le projet">Communication</span>
                     </h4>
                     <p>Création d'un site web pour la promotion de transport doux sur le campus de la Doua</p>
                 </div>
                 <div class="project-section" data-comp="Travail en Équipe">
                     <h4>
-                        Projet 6 –  Découverte de l’environnement RSE
+                        Projet 6 – Découverte de l’environnement RSE
+                        <a href="S1/RSE DASSAULT AVIATION.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Travail en Équipe" 
                               style="background-color: var(--skill-monitoring);" 
@@ -911,16 +945,19 @@
                         <span class="info-label" title="Informations sur le projet">Recherches</span>
                         <span class="info-label" title="Informations sur le projet">Synthèse</span>
                     </h4>
-                    <p>Etude de la stratégie RSE de Dassault Aviation</p>
+                    <p>Étude de la stratégie RSE de Dassault Aviation</p>
                 </div>
             </div>
 
-            <!-- Contenu S2 (6 sections avec badge + label + info-label) -->
+            <!-- Contenu S2 (4 sections avec badge + label + info-label + icône de téléchargement) -->
             <div id="s2" class="tab-content">
                 <h3>Projets Semestre 2</h3>
                 <div class="project-section" data-comp="Développer">
                     <h4>
                         Projet 1 – Développement d’une application / Exploration algorithmique d’un problème
+                        <a href="docs/projet1_s2.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Développer" 
                               style="background-color: var(--skill-system);" 
@@ -931,12 +968,15 @@
                         <span class="info-label" title="Informations sur le projet">Développer</span>
                         <span class="info-label" title="Informations sur le projet">Optimisation</span>
                     </h4>
-                    <p>Developpement d'un application Java sur la gestion de vols au sein de la France avec interface IHM</p>
-                    <p>Optimisaton et implémentation d'algorithme de graphe pour la gestion de collision des avions</p>
+                    <p>Développement d'une application Java sur la gestion de vols au sein de la France avec interface IHM</p>
+                    <p>Optimisation et implémentation d'algorithmes de graphe pour la gestion de collision des avions</p>
                 </div>
                 <div class="project-section" data-comp="Déploiement Réseaux">
                     <h4>
                         Projet 2 – Installation d'un service réseau
+                        <a href="S2/FINOT_CROZET .pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Déploiement Réseaux" 
                               style="background-color: var(--skill-network);" 
@@ -947,12 +987,15 @@
                         <span class="info-label" title="Informations sur le projet">Adressage IP</span>
                         <span class="info-label" title="Informations sur le projet">Rédaction</span>
                     </h4>
-                    <p>Rédaction d'une fiche technique pour déplooyer un serveur Apache2 et Nginx</p>
-                    <p>Infrastructure réseau complète, configuration de switch et de Routeurs</p>
+                    <p>Rédaction d'une fiche technique pour déployer un serveur Apache2 et Nginx</p>
+                    <p>Infrastructure réseau complète, configuration de switch et de routeurs</p>
                 </div>
                 <div class="project-section" data-comp="Base de Données">
                     <h4>
                         Projet 3 – Exploitation d’une base de données
+                        <a href="S2/SAE POWERBI Mathieu VELLOZZI Guillaume FINOT.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Base de Données" 
                               style="background-color: var(--skill-database);" 
@@ -963,11 +1006,14 @@
                         <span class="info-label" title="Informations sur le projet">Base de données</span>
                         <span class="info-label" title="Informations sur le projet">Exploitation de données</span>
                     </h4>
-                    <p>Exploitation d'une base de données pour extraire des shéma utile pour l'exploitation commerciale d'une entreprise</p>
+                    <p>Exploitation d'une base de données pour extraire des schémas utiles pour l'exploitation commerciale d'une entreprise</p>
                 </div>
                 <div class="project-section" data-comp="Recueil de Besoins">
                     <h4>
-                        Projet 5 – Gestion d'un projet
+                        Projet 4 – Gestion d'un projet
+                        <a href="S2/Cahier des Charges CROZET LAGARDE FINOT.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Recueil de Besoins" 
                               style="background-color: var(--skill-cloud);" 
@@ -979,29 +1025,17 @@
                     </h4>
                     <p>Rédaction d'un cahier des charges et gestion des objectifs SMART, GANTT, matrice RACI</p>
                 </div>
-                <!--
-                <div class="project-section" data-comp="Travail en Équipe">
-                    <h4>
-                        Projet 6 – Section Travail en Équipe
-                        <span class="comp-badge" 
-                              data-comp="Travail en Équipe" 
-                              style="background-color: var(--skill-monitoring);" 
-                              title="Voir la compétence 'Travail en Équipe'">
-                        </span>
-                        <span class="comp-label" style="background-color: var(--skill-monitoring);">Travail en Équipe</span>
-                        <span class="info-label" title="Informations sur le projet">Info</span>
-                    </h4>
-                    <p>Coordination d’une équipe de 4 pour un projet d’application interne.</p>
-                </div>
-                -->
             </div>
 
-            <!-- Contenu S3 -->
+            <!-- Contenu S3 (1 section avec badge + label + info-label + icône de téléchargement) -->
             <div id="s3" class="tab-content">
                 <h3>Projets Semestre 3</h3>
                 <div class="project-section" data-comp="Travail en Équipe">
                     <h4>
                         Projet 1 – Création et déploiement de services applicatifs
+                        <a href="S3/Green Blue Modern Future Technology Presentation.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Travail en Équipe" 
                               style="background-color: var(--skill-monitoring);" 
@@ -1014,19 +1048,21 @@
                         <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
                         <span class="comp-label" style="background-color: var(--skill-monitoring);">Travail en Équipe</span>
                         <span class="info-label" title="Informations sur le projet">Hping3</span>
-                        <span class="info-label" title="Informations sur le projet">Dos</span>
-
+                        <span class="info-label" title="Informations sur le projet">DOS</span>
                     </h4>
-                    <p>Test et compréhension des sécurité utiliser contre le DOS sur un serveur Apache2</p>
+                    <p>Test et compréhension des techniques utilisées contre le DOS sur un serveur Apache2</p>
                 </div>
             </div>
 
-            <!-- Contenu S4 -->
+            <!-- Contenu S4 (1 section avec badge + label + info-label + icône de téléchargement) -->
             <div id="s4" class="tab-content">
                 <h3>Projets Semestre 4</h3>
                 <div class="project-section" data-comp="Travail en Équipe">
                     <h4>
                         Projet 1 – Déployer et sécuriser des services dans un réseau
+                        <a href="docs/projet1_s4.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Travail en Équipe" 
                               style="background-color: var(--skill-monitoring);" 
@@ -1039,21 +1075,23 @@
                         <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
                         <span class="comp-label" style="background-color: var(--skill-monitoring);">Travail en Équipe</span>
                         <span class="info-label" title="Informations sur le projet">Docker</span>
-                        <span class="info-label" title="Informations sur le projet">Docker swarm</span>
+                        <span class="info-label" title="Informations sur le projet">Docker Swarm</span>
                         <span class="info-label" title="Informations sur le projet">Recherche</span>
-
                     </h4>
-                    <p>Mise en place d'un DOcker Swarm (1 manager et 2 worker) afin de déployer un service</p>
-                    <p>Réalisatoin d'un Wireshark WEB grace a des docker compose</p>
+                    <p>Mise en place d'un Docker Swarm (1 manager et 2 workers) afin de déployer un service</p>
+                    <p>Réalisation d'un Wireshark Web grâce à des Docker Compose</p>
                 </div>
             </div>
 
-            <!-- Contenu Alternance -->
+            <!-- Contenu Alternance (3 sections avec badge + label + info-label + icône de téléchargement) -->
             <div id="alternance" class="tab-content">
                 <h3>Projets en Alternance</h3>
                 <div class="project-section" data-comp="Travail en Équipe">
                     <h4>
                         Projet 1 – Création d'un parc informatique virtuel
+                        <a href="docs/projet1_alt.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Travail en Équipe" 
                               style="background-color: var(--skill-monitoring);" 
@@ -1063,21 +1101,23 @@
                         <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
                         <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
                         <span class="comp-label" style="background-color: var(--skill-monitoring);">Travail en Équipe</span>
-                        <span class="info-label" title="Informations sur le projet">Windows serveur</span>
-                        <span class="info-label" title="Informations sur le projet">Pare feu</span>
+                        <span class="info-label" title="Informations sur le projet">Windows Serveur</span>
+                        <span class="info-label" title="Informations sur le projet">Pare-feu</span>
                         <span class="info-label" title="Informations sur le projet">Active Directory</span>
-
                     </h4>
-                    <p>Réalisatoin d'un parc Informatique virtuel</p>
+                    <p>Réalisation d'un parc informatique virtuel</p>
                     <p>Configuration d'un iDRAC</p>
                     <p>Boot d'un serveur Windows depuis son iDRAC</p>
-                    <p>Mise en place de role : DC, DHCP, DNS</p>
+                    <p>Mise en place de rôles : DC, DHCP, DNS</p>
                     <p>Création de VLAN</p>
                     <p>Création d'un serveur Web dans une DMZ avec règle de NAT pour redirection</p>
                 </div> 
                 <div class="project-section" data-comp="Travail en Équipe">
                     <h4>
                         Ticketing
+                        <a href="docs/ticketing_alt.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Travail en Équipe" 
                               style="background-color: var(--skill-monitoring);" 
@@ -1089,13 +1129,74 @@
                         <span class="info-label" title="Informations sur le projet">Recherche</span>
                         <span class="info-label" title="Informations sur le projet">Organisation</span>
                         <span class="info-label" title="Informations sur le projet">Professionnalisme</span>
-
                     </h4>
-                    <p>Gestion de ticket client sur les infrastructure Réseau et Système</p>
+                    <p>Gestion de tickets clients sur les infrastructures réseau et système</p>
+                </div>
+                <div class="project-section" data-comp="Travail en Équipe">
+                    <h4>
+                        Gestion d'infrastructure réseau et système
+                        <a href="docs/preparation_poste_alt.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
+                        <span class="comp-badge" 
+                              data-comp="Travail en Équipe" 
+                              style="background-color: var(--skill-monitoring);" 
+                              title="Voir la compétence 'Travail en Équipe'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                        <span class="comp-label" style="background-color: var(--skill-database);">Base de Données</span>
+                        <span class="info-label" title="Informations sur le projet">Active Directory</span>
+                        <span class="info-label" title="Informations sur le projet">DNS</span>
+                        <span class="info-label" title="Informations sur le projet">DHCP</span>
+                        <span class="info-label" title="Informations sur le projet">Firewall</span>
+                        <span class="info-label" title="Informations sur le projet">Switch</span>
+                    </h4>
+                    <p>Supervision et résolution de problème sur des infrastructure système</p>
+                    <p>Supervision et résolution de problème sur des infrastructures réseaux</p>
+                </div>
+                <div class="project-section" data-comp="Travail en Équipe">
+                    <h4>
+                        Gestion de Backup
+                        <a href="docs/preparation_poste_alt.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
+                        <span class="comp-badge" 
+                              data-comp="Travail en Équipe" 
+                              style="background-color: var(--skill-monitoring);" 
+                              title="Voir la compétence 'Travail en Équipe'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                        <span class="comp-label" style="background-color: var(--skill-database);">Base de Données</span>
+                        <span class="info-label" title="Informations sur le projet">Recherche</span>
+                        <span class="info-label" title="Informations sur le projet">Stockage</span>
+                    </h4>
+                    <p>Supervision et résolution d'erreur de backup</p>
+                </div>
+                <div class="project-section" data-comp="Travail en Équipe">
+                    <h4>
+                        Création de VPN
+                        <a href="docs/preparation_poste_alt.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
+                        <span class="comp-badge" 
+                              data-comp="Travail en Équipe" 
+                              style="background-color: var(--skill-monitoring);" 
+                              title="Voir la compétence 'Travail en Équipe'">
+                        </span>
+                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                        <span class="comp-label" style="background-color: var(--skill-database);">Base de Données</span>
+                        <span class="info-label" title="Informations sur le projet">IPsec</span>
+                        <span class="info-label" title="Informations sur le projet">SSL</span>
+                    </h4>
+                    <p>Création d'un VPN IPsec site à site entre deux Firewall</p>
+                    <p>Création d'un VPN SSL avec génération d'un fichier .ovpn pour la configuration dans OpenVPN</p>
                 </div>
                 <div class="project-section" data-comp="Travail en Équipe">
                     <h4>
                         Préparation de poste informatique
+                        <a href="docs/preparation_poste_alt.pdf" download title="Télécharger le PDF">
+                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                        </a>
                         <span class="comp-badge" 
                               data-comp="Travail en Équipe" 
                               style="background-color: var(--skill-monitoring);" 
@@ -1105,9 +1206,8 @@
                         <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
                         <span class="info-label" title="Informations sur le projet">Organisation</span>
                         <span class="info-label" title="Informations sur le projet">Professionnalisme</span>
-
                     </h4>
-                    <p>Préparation de poste informatique prêt à l'emploie</p>
+                    <p>Préparation de poste informatique prêt à l'emploi</p>
                 </div>              
             </div>
         </section>
