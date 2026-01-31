@@ -5,4 +5,21 @@
     <lastmod>2026-01-31</lastmod>
     <priority>1.0</priority>
   </url>
+
+    <!-- Page listant les projets 
+  <url>
+    <loc>https://gfinot.fr/projects</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  
+    
+    RÈGLES À RESPECTER :
+    - Ne mettre QUE des pages existantes (pas de 404)
+    - URLs complètes (https:// obligatoire)
+    - Mettre à jour lastmod quand le contenu change
+    - priority est indicative (Google peut l’ignorer) allant de 1 (très imp) à 0.1 (pas imp) 
+  -->
+  
 </urlset>
