@@ -435,7 +435,7 @@
             font-size: 1.1rem;
         }
 
-        /* Onglets et contenus */
+        /* Onglets principaux */
         .tabs {
             display: flex;
             gap: 10px;
@@ -445,7 +445,7 @@
 
         .tab-button {
             flex: 1;
-            min-width: 80px;
+            min-width: 200px;
             padding: 15px 0;
             text-align: center;
             border-radius: var(--border-radius);
@@ -472,7 +472,7 @@
             display: block;
         }
 
-        /* Sous-onglets Alternance */
+        /* Sous-onglets */
         .sub-tabs {
             display: flex;
             gap: 15px;
@@ -483,7 +483,7 @@
         }
         
         .sub-tab-button {
-            padding: 8px 20px;
+            padding: 8px 18px;
             border-radius: 30px;
             background: var(--light);
             color: var(--text);
@@ -935,247 +935,258 @@
         <section id="projets" class="section">
             <h2 class="section-title">Projets</h2>
 
-            <!-- Onglets -->
+            <!-- Onglets Principaux -->
             <div class="tabs">
-                <div class="tab-button active" data-target="s1">S1</div>
-                <div class="tab-button" data-target="s2">S2</div>
-                <div class="tab-button" data-target="s3">S3</div>
-                <div class="tab-button" data-target="s4">S4</div>
-                <div class="tab-button" data-target="s5">S5</div>
-                <div class="tab-button" data-target="s6">S6</div>
-                <div class="tab-button" data-target="alternance">Alternance</div>
+                <div class="tab-button active" data-target="iut">IUT Informatique (La Doua)</div>
+                <div class="tab-button" data-target="cpe">Cycle ingénieur (CPE)</div>
+                <div class="tab-button" data-target="alternance">Alternance (Koesio)</div>
             </div>
 
-            <!-- Contenu S1 -->
-            <div id="s1" class="tab-content active">
-                <h3>Projets Semestre 1</h3>
-                <div class="project-section" data-comp="Développer">
-                    <h4>
-                        Projet 1 – Implémentation d'un besoin client
-                        <a href="" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Développer" style="background-color: var(--skill-system);" title="Voir la compétence 'Développer'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-system);">Développer</span>
-                        <span class="info-label" title="Informations">C</span>
-                        <span class="info-label" title="Informations">Algorithmique</span>
-                        <span class="info-label" title="Informations">Communication</span>
-                    </h4>
-                    <p>Développement d'une application en C pour la gestion de panneaux d'affichage de vols internationaux.</p>
-                </div>
-                <div class="project-section" data-comp="Optimisation">
-                    <h4>
-                        Projet 2 – Comparaison d’approches algorithmiques
-                        <a href="S1/Compte_Rendu_Algorithmique_SAE.pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Optimisation" style="background-color: var(--skill-security);" title="Voir la compétence 'Optimisation'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-security);">Optimisation</span>
-                        <span class="info-label" title="Informations">Python</span>
-                        <span class="info-label" title="Informations">Algorithmique</span>
-                    </h4>
-                    <p>Développement d'un programme en Python permettant de comparer les algorithmes de tri selon plusieurs paramètres de performance.</p>
-                </div>
-                <div class="project-section" data-comp="Déploiement Réseaux">
-                    <h4>
-                        Projet 3 – Installation d’un poste de développement
-                        <a href="S1/ConfigurationFinal.pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Déploiement Réseaux" style="background-color: var(--skill-network);" title="Voir la compétence 'Déploiement Réseaux'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
-                        <span class="info-label" title="Informations">Bash</span>
-                        <span class="info-label" title="Informations">Ubuntu / VM</span>
-                    </h4>
-                    <p>Création d'une fiche conseil pour des postes adaptés à des besoins spécifiques (personne malvoyante et photographe).</p>
-                    <p>Déploiement d'une VM Ubuntu simulant un poste client complet pour le profil photographe.</p>
-                </div>
-                <div class="project-section" data-comp="Base de Données">
-                    <h4>
-                        Projet 4 – Création d’une base de données
-                        <a href="S1/RAZA_FINOT_SAEBD.pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Base de Données" style="background-color: var(--skill-database);" title="Voir la compétence 'Base de Données'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-database);">Base de Données</span>
-                        <span class="info-label" title="Informations">SQL</span>
-                        <span class="info-label" title="Informations">MCD</span>
-                    </h4>
-                    <p>Conception d'une base de données relationnelle pour un cabinet de thérapie avec la modélisation des dépendances.</p>
-                </div>
-                <div class="project-section" data-comp="Recueil de Besoins">
-                    <h4>
-                        Projet 5 – Recueil de besoins
-                        <a href="docs/projet5_s1.pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Recueil de Besoins" style="background-color: var(--skill-cloud);" title="Voir la compétence 'Recueil de Besoins'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
-                        <span class="info-label" title="Informations">Communication</span>
-                    </h4>
-                    <p>Création d'un site web pour la promotion des transports doux sur le campus de La Doua.</p>
-                </div>
-                <div class="project-section" data-comp="Travail en Équipe">
-                    <h4>
-                        Projet 6 – Découverte de l’environnement RSE
-                        <a href="S1/RSE DASSAULT AVIATION.pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Travail en Équipe" style="background-color: var(--skill-monitoring);" title="Voir la compétence 'Travail en Équipe'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-monitoring);">Travail en Équipe</span>
-                        <span class="info-label" title="Informations">Recherche & Synthèse</span>
-                    </h4>
-                    <p>Étude approfondie de la stratégie RSE de l'entreprise Dassault Aviation.</p>
-                </div>
-            </div>
-
-            <!-- Contenu S2 -->
-            <div id="s2" class="tab-content">
-                <h3>Projets Semestre 2</h3>
-                <div class="project-section" data-comp="Développer">
-                    <h4>
-                        Projet 1 – Développement d’application & Optimisation algorithmique
-                        <a href="docs/projet1_s2.pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Développer" style="background-color: var(--skill-system);" title="Voir la compétence 'Développer'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-system);">Développer</span>
-                        <span class="comp-label" style="background-color: var(--skill-security);">Optimisation</span>
-                        <span class="info-label" title="Informations">Java / IHM</span>
-                        <span class="info-label" title="Informations">Théorie des Graphes</span>
-                    </h4>
-                    <p>Développement d'une application Java de gestion de vols en France avec une interface graphique (IHM).</p>
-                    <p>Optimisation et implémentation d'algorithmes de graphes pour la gestion des collisions aériennes.</p>
-                </div>
-                <div class="project-section" data-comp="Déploiement Réseaux">
-                    <h4>
-                        Projet 2 – Installation d'un service réseau
-                        <a href="S2/FINOT_CROZET .pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Déploiement Réseaux" style="background-color: var(--skill-network);" title="Voir la compétence 'Déploiement Réseaux'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
-                        <span class="info-label" title="Informations">Cisco</span>
-                        <span class="info-label" title="Informations">Adressage IP</span>
-                    </h4>
-                    <p>Déploiement d'une infrastructure réseau complète, avec la configuration de commutateurs (switchs) et de routeurs Cisco.</p>
-                    <p>Rédaction d'une fiche technique détaillée pour le déploiement de serveurs web Apache2 et Nginx.</p>
-                </div>
-                <div class="project-section" data-comp="Base de Données">
-                    <h4>
-                        Projet 3 – Exploitation de données (Business Intelligence)
-                        <a href="S2/SAE POWERBI Mathieu VELLOZZI Guillaume FINOT.pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Base de Données" style="background-color: var(--skill-database);" title="Voir la compétence 'Base de Données'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-database);">Base de Données</span>
-                        <span class="info-label" title="Informations">Power BI</span>
-                    </h4>
-                    <p>Exploitation d'une base de données avec Power BI pour extraire des indicateurs utiles au pilotage commercial d'une entreprise.</p>
-                </div>
-                <div class="project-section" data-comp="Recueil de Besoins">
-                    <h4>
-                        Projet 4 – Gestion de projet informatique
-                        <a href="S2/Cahier des Charges CROZET LAGARDE FINOT.pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Recueil de Besoins" style="background-color: var(--skill-cloud);" title="Voir la compétence 'Recueil de Besoins'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
-                        <span class="info-label" title="Informations">Méthodologie Projet</span>
-                    </h4>
-                    <p>Rédaction d'un cahier des charges, définition d'objectifs SMART, réalisation d'un diagramme de GANTT et d'une matrice RACI.</p>
-                </div>
-            </div>
-
-            <!-- Contenu S3 -->
-            <div id="s3" class="tab-content">
-                <h3>Projets Semestre 3</h3>
-                <div class="project-section" data-comp="Travail en Équipe">
-                    <h4>
-                        Projet 1 – Création et déploiement de services applicatifs
-                        <a href="S3/Green Blue Modern Future Technology Presentation.pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Travail en Équipe" style="background-color: var(--skill-monitoring);" title="Voir la compétence 'Travail en Équipe'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-system);">Développer</span>
-                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
-                        <span class="comp-label" style="background-color: var(--skill-security);">Sécurité</span>
-                        <span class="info-label" title="Informations">Hping3</span>
-                        <span class="info-label" title="Informations">DDoS</span>
-                    </h4>
-                    <p>Tests et compréhension des techniques d'attaques DoS (Déni de Service) sur un serveur Apache2 afin d'en comprendre les vulnérabilités.</p>
-                </div>
-            </div>
-
-            <!-- Contenu S4 -->
-            <div id="s4" class="tab-content">
-                <h3>Projets Semestre 4</h3>
-                <div class="project-section" data-comp="Travail en Équipe">
-                    <h4>
-                        Projet 1 – Déploiement et sécurisation de services Docker
-                        <a href="docs/projet1_s4.pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Travail en Équipe" style="background-color: var(--skill-monitoring);" title="Voir la compétence 'Travail en Équipe'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
-                        <span class="info-label" title="Informations">Docker Swarm</span>
-                        <span class="info-label" title="Informations">Docker Compose</span>
-                    </h4>
-                    <p>Mise en place d'un cluster Docker Swarm (1 nœud Manager et 2 nœuds Workers) pour déployer et orchestrer un service réseau.</p>
-                    <p>Mise en place d'un conteneur Wireshark Web à l'aide de Docker Compose.</p>
-                </div>
-            </div>
-
-            <!-- Contenu S5 -->
-            <div id="s5" class="tab-content">
-                <h3>Projets Semestre 5</h3>
-                <div class="project-section" data-comp="Travail en Équipe">
-                    <h4>
-                        Projet 1 – Mise en place d'un SOC (Security Operations Center)
-                        <a href="docs/projet_soc_s5.pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Travail en Équipe" style="background-color: var(--skill-monitoring);" title="Voir la compétence 'Travail en Équipe'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-security);">Sécurité (Optimisation)</span>
-                        <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
-                        <span class="info-label" title="Informations">SIEM</span>
-                        <span class="info-label" title="Informations">Suricata</span>
-                        <span class="info-label" title="Informations">MISP</span>
-                        <span class="info-label" title="Informations">OpenSearch</span>
-                    </h4>
-                    <p>Déploiement d'une architecture complète de supervision de sécurité (SIEM) pour collecter, corréler et analyser les événements réseau de l'infrastructure.</p>
-                    <p>Intégration d'outils open-source spécialisés : Suricata pour la détection d'intrusions (IDS), MISP pour le partage de renseignements sur les menaces (Threat Intelligence), et OpenSearch pour la centralisation des logs.</p>
-                    <p>Création de tableaux de bord et rédaction de règles d'alerte pour détecter les comportements suspects et automatiser la réponse aux incidents.</p>
-                </div>
-            </div>
-
-            <!-- Contenu S6 -->
-            <div id="s6" class="tab-content">
-                <h3>Projets Semestre 6</h3>
-                <div class="project-section" data-comp="Recueil de Besoins">
-                    <h4>
-                        Projet 1 – Conception et mise en place d'un PRA
-                        <a href="docs/projet_pra_s6.pdf" download title="Télécharger le PDF">
-                            <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
-                        </a>
-                        <span class="comp-badge" data-comp="Recueil de Besoins" style="background-color: var(--skill-cloud);" title="Voir la compétence 'Recueil de Besoins'"></span>
-                        <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
-                        <span class="comp-label" style="background-color: var(--skill-network);">Réseau & Sécurité</span>
-                        <span class="info-label" title="Informations">PRA / PCA</span>
-                        <span class="info-label" title="Informations">Haute Disponibilité</span>
-                        <span class="info-label" title="Informations">Redondance</span>
-                    </h4>
-                    <p>Audit et analyse des risques d'une infrastructure d'entreprise existante afin d'identifier les points de défaillance uniques (SPOF).</p>
-                    <p>Définition des objectifs de temps et de point de reprise (RTO / RPO) en accord avec les exigences et les besoins métiers critiques.</p>
-                    <p>Conception d'une infrastructure redondante, tolérante aux pannes, avec des mécanismes de sauvegarde et de bascule automatique pour assurer la continuité de service.</p>
-                </div>
-            </div>
-            
-            <!-- Contenu Alternance avec Sous-onglets -->
-            <div id="alternance" class="tab-content">
-                <h3>Projets en Alternance (Koesio)</h3>
+            <!-- CONTENU IUT (La Doua) -->
+            <div id="iut" class="tab-content active">
                 
-                <!-- Navigation des sous-onglets -->
+                <!-- Sous-onglets IUT -->
+                <div class="sub-tabs">
+                    <div class="sub-tab-button active" data-target="s1">Semestre 1</div>
+                    <div class="sub-tab-button" data-target="s2">Semestre 2</div>
+                    <div class="sub-tab-button" data-target="s3">Semestre 3</div>
+                    <div class="sub-tab-button" data-target="s4">Semestre 4</div>
+                    <div class="sub-tab-button" data-target="s5">Semestre 5</div>
+                    <div class="sub-tab-button" data-target="s6">Semestre 6</div>
+                </div>
+
+                <!-- Semestre 1 -->
+                <div id="s1" class="sub-tab-content active">
+                    <div class="project-section" data-comp="Développer">
+                        <h4>
+                            Projet 1 – Implémentation d'un besoin client
+                            <a href="" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Développer" style="background-color: var(--skill-system);" title="Voir la compétence 'Développer'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-system);">Développer</span>
+                            <span class="info-label" title="Informations">C</span>
+                            <span class="info-label" title="Informations">Algorithmique</span>
+                            <span class="info-label" title="Informations">Communication</span>
+                        </h4>
+                        <p>Développement d'une application en C pour la gestion de panneaux d'affichage de vols internationaux.</p>
+                    </div>
+                    <div class="project-section" data-comp="Optimisation">
+                        <h4>
+                            Projet 2 – Comparaison d’approches algorithmiques
+                            <a href="S1/Compte_Rendu_Algorithmique_SAE.pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Optimisation" style="background-color: var(--skill-security);" title="Voir la compétence 'Optimisation'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-security);">Optimisation</span>
+                            <span class="info-label" title="Informations">Python</span>
+                            <span class="info-label" title="Informations">Algorithmique</span>
+                        </h4>
+                        <p>Développement d'un programme en Python permettant de comparer les algorithmes de tri selon plusieurs paramètres de performance.</p>
+                    </div>
+                    <div class="project-section" data-comp="Déploiement Réseaux">
+                        <h4>
+                            Projet 3 – Installation d’un poste de développement
+                            <a href="S1/ConfigurationFinal.pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Déploiement Réseaux" style="background-color: var(--skill-network);" title="Voir la compétence 'Déploiement Réseaux'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                            <span class="info-label" title="Informations">Bash</span>
+                            <span class="info-label" title="Informations">Ubuntu / VM</span>
+                        </h4>
+                        <p>Création d'une fiche conseil pour des postes adaptés à des besoins spécifiques (personne malvoyante et photographe).</p>
+                        <p>Déploiement d'une VM Ubuntu simulant un poste client complet pour le profil photographe.</p>
+                    </div>
+                    <div class="project-section" data-comp="Base de Données">
+                        <h4>
+                            Projet 4 – Création d’une base de données
+                            <a href="S1/RAZA_FINOT_SAEBD.pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Base de Données" style="background-color: var(--skill-database);" title="Voir la compétence 'Base de Données'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-database);">Base de Données</span>
+                            <span class="info-label" title="Informations">SQL</span>
+                            <span class="info-label" title="Informations">MCD</span>
+                        </h4>
+                        <p>Conception d'une base de données relationnelle pour un cabinet de thérapie avec la modélisation des dépendances.</p>
+                    </div>
+                    <div class="project-section" data-comp="Recueil de Besoins">
+                        <h4>
+                            Projet 5 – Recueil de besoins
+                            <a href="docs/projet5_s1.pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Recueil de Besoins" style="background-color: var(--skill-cloud);" title="Voir la compétence 'Recueil de Besoins'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
+                            <span class="info-label" title="Informations">Communication</span>
+                        </h4>
+                        <p>Création d'un site web pour la promotion des transports doux sur le campus de La Doua.</p>
+                    </div>
+                    <div class="project-section" data-comp="Travail en Équipe">
+                        <h4>
+                            Projet 6 – Découverte de l’environnement RSE
+                            <a href="S1/RSE DASSAULT AVIATION.pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Travail en Équipe" style="background-color: var(--skill-monitoring);" title="Voir la compétence 'Travail en Équipe'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-monitoring);">Travail en Équipe</span>
+                            <span class="info-label" title="Informations">Recherche & Synthèse</span>
+                        </h4>
+                        <p>Étude approfondie de la stratégie RSE de l'entreprise Dassault Aviation.</p>
+                    </div>
+                </div>
+
+                <!-- Semestre 2 -->
+                <div id="s2" class="sub-tab-content">
+                    <div class="project-section" data-comp="Développer">
+                        <h4>
+                            Projet 1 – Développement d’application & Optimisation algorithmique
+                            <a href="docs/projet1_s2.pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Développer" style="background-color: var(--skill-system);" title="Voir la compétence 'Développer'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-system);">Développer</span>
+                            <span class="comp-label" style="background-color: var(--skill-security);">Optimisation</span>
+                            <span class="info-label" title="Informations">Java / IHM</span>
+                            <span class="info-label" title="Informations">Théorie des Graphes</span>
+                        </h4>
+                        <p>Développement d'une application Java de gestion de vols en France avec une interface graphique (IHM).</p>
+                        <p>Optimisation et implémentation d'algorithmes de graphes pour la gestion des collisions aériennes.</p>
+                    </div>
+                    <div class="project-section" data-comp="Déploiement Réseaux">
+                        <h4>
+                            Projet 2 – Installation d'un service réseau
+                            <a href="S2/FINOT_CROZET .pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Déploiement Réseaux" style="background-color: var(--skill-network);" title="Voir la compétence 'Déploiement Réseaux'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                            <span class="info-label" title="Informations">Cisco</span>
+                            <span class="info-label" title="Informations">Adressage IP</span>
+                        </h4>
+                        <p>Déploiement d'une infrastructure réseau complète, avec la configuration de commutateurs (switchs) et de routeurs Cisco.</p>
+                        <p>Rédaction d'une fiche technique détaillée pour le déploiement de serveurs web Apache2 et Nginx.</p>
+                    </div>
+                    <div class="project-section" data-comp="Base de Données">
+                        <h4>
+                            Projet 3 – Exploitation de données (Business Intelligence)
+                            <a href="S2/SAE POWERBI Mathieu VELLOZZI Guillaume FINOT.pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Base de Données" style="background-color: var(--skill-database);" title="Voir la compétence 'Base de Données'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-database);">Base de Données</span>
+                            <span class="info-label" title="Informations">Power BI</span>
+                        </h4>
+                        <p>Exploitation d'une base de données avec Power BI pour extraire des indicateurs utiles au pilotage commercial d'une entreprise.</p>
+                    </div>
+                    <div class="project-section" data-comp="Recueil de Besoins">
+                        <h4>
+                            Projet 4 – Gestion de projet informatique
+                            <a href="S2/Cahier des Charges CROZET LAGARDE FINOT.pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Recueil de Besoins" style="background-color: var(--skill-cloud);" title="Voir la compétence 'Recueil de Besoins'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
+                            <span class="info-label" title="Informations">Méthodologie Projet</span>
+                        </h4>
+                        <p>Rédaction d'un cahier des charges, définition d'objectifs SMART, réalisation d'un diagramme de GANTT et d'une matrice RACI.</p>
+                    </div>
+                </div>
+
+                <!-- Semestre 3 -->
+                <div id="s3" class="sub-tab-content">
+                    <div class="project-section" data-comp="Travail en Équipe">
+                        <h4>
+                            Projet 1 – Création et déploiement de services applicatifs
+                            <a href="S3/Green Blue Modern Future Technology Presentation.pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Travail en Équipe" style="background-color: var(--skill-monitoring);" title="Voir la compétence 'Travail en Équipe'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-system);">Développer</span>
+                            <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                            <span class="comp-label" style="background-color: var(--skill-security);">Sécurité</span>
+                            <span class="info-label" title="Informations">Hping3</span>
+                            <span class="info-label" title="Informations">DDoS</span>
+                        </h4>
+                        <p>Tests et compréhension des techniques d'attaques DoS (Déni de Service) sur un serveur Apache2 afin d'en comprendre les vulnérabilités.</p>
+                    </div>
+                </div>
+
+                <!-- Semestre 4 -->
+                <div id="s4" class="sub-tab-content">
+                    <div class="project-section" data-comp="Travail en Équipe">
+                        <h4>
+                            Projet 1 – Déploiement et sécurisation de services Docker
+                            <a href="docs/projet1_s4.pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Travail en Équipe" style="background-color: var(--skill-monitoring);" title="Voir la compétence 'Travail en Équipe'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                            <span class="info-label" title="Informations">Docker Swarm</span>
+                            <span class="info-label" title="Informations">Docker Compose</span>
+                        </h4>
+                        <p>Mise en place d'un cluster Docker Swarm (1 nœud Manager et 2 nœuds Workers) pour déployer et orchestrer un service réseau.</p>
+                        <p>Mise en place d'un conteneur Wireshark Web à l'aide de Docker Compose.</p>
+                    </div>
+                </div>
+
+                <!-- Semestre 5 -->
+                <div id="s5" class="sub-tab-content">
+                    <div class="project-section" data-comp="Travail en Équipe">
+                        <h4>
+                            Projet 1 – Mise en place d'un SOC (Security Operations Center)
+                            <a href="docs/projet_soc_s5.pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Travail en Équipe" style="background-color: var(--skill-monitoring);" title="Voir la compétence 'Travail en Équipe'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-security);">Sécurité (Optimisation)</span>
+                            <span class="comp-label" style="background-color: var(--skill-network);">Déploiement Réseaux</span>
+                            <span class="info-label" title="Informations">SIEM</span>
+                            <span class="info-label" title="Informations">Suricata</span>
+                            <span class="info-label" title="Informations">MISP</span>
+                            <span class="info-label" title="Informations">OpenSearch</span>
+                        </h4>
+                        <p>Déploiement d'une architecture complète de supervision de sécurité (SIEM) pour collecter, corréler et analyser les événements réseau de l'infrastructure.</p>
+                        <p>Intégration d'outils open-source spécialisés : Suricata pour la détection d'intrusions (IDS), MISP pour le partage de renseignements sur les menaces (Threat Intelligence), et OpenSearch pour la centralisation des logs.</p>
+                        <p>Création de tableaux de bord et rédaction de règles d'alerte pour détecter les comportements suspects et automatiser la réponse aux incidents.</p>
+                    </div>
+                </div>
+
+                <!-- Semestre 6 -->
+                <div id="s6" class="sub-tab-content">
+                    <div class="project-section" data-comp="Recueil de Besoins">
+                        <h4>
+                            Projet 1 – Conception et mise en place d'un PRA
+                            <a href="docs/projet_pra_s6.pdf" download title="Télécharger le PDF">
+                                <img src="img/download-icon.png" alt="Télécharger PDF" class="pdf-icon">
+                            </a>
+                            <span class="comp-badge" data-comp="Recueil de Besoins" style="background-color: var(--skill-cloud);" title="Voir la compétence 'Recueil de Besoins'"></span>
+                            <span class="comp-label" style="background-color: var(--skill-cloud);">Recueil de Besoins</span>
+                            <span class="comp-label" style="background-color: var(--skill-network);">Réseau & Sécurité</span>
+                            <span class="info-label" title="Informations">PRA / PCA</span>
+                            <span class="info-label" title="Informations">Haute Disponibilité</span>
+                            <span class="info-label" title="Informations">Redondance</span>
+                        </h4>
+                        <p>Audit et analyse des risques d'une infrastructure d'entreprise existante afin d'identifier les points de défaillance uniques (SPOF).</p>
+                        <p>Définition des objectifs de temps et de point de reprise (RTO / RPO) en accord avec les exigences et les besoins métiers critiques.</p>
+                        <p>Conception d'une infrastructure redondante, tolérante aux pannes, avec des mécanismes de sauvegarde et de bascule automatique pour assurer la continuité de service.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTENU CPE (Cycle Ingénieur) -->
+            <div id="cpe" class="tab-content">
+                <div class="project-section">
+                    <h4 style="color: var(--secondary);">À venir...</h4>
+                    <p style="font-style: italic;">Cette section regroupera les projets réalisés lors de mon cycle d'ingénieur à CPE Lyon.</p>
+                </div>
+            </div>
+
+            <!-- CONTENU ALTERNANCE (Koesio) -->
+            <div id="alternance" class="tab-content">
+                
+                <!-- Navigation des sous-onglets Alternance -->
                 <div class="sub-tabs">
                     <div class="sub-tab-button active" data-target="alt-annee1">1ère Année (Apprentissage & Support)</div>
                     <div class="sub-tab-button" data-target="alt-annee2">2ème Année (Projets & Autonomie)</div>
@@ -1351,7 +1362,7 @@
     </footer>
 
     <script>
-        // Gestion des onglets principaux (Semestres)
+        // Gestion des onglets principaux (IUT, CPE, Alternance)
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
 
@@ -1365,17 +1376,18 @@
             });
         });
 
-        // Gestion des SOUS-onglets (Alternance 1ère et 2ème année)
+        // Gestion des SOUS-onglets de manière locale (pour IUT et Alternance)
         const subTabButtons = document.querySelectorAll('.sub-tab-button');
-        const subTabContents = document.querySelectorAll('.sub-tab-content');
 
         subTabButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const targetId = button.getAttribute('data-target');
+                // Trouver le conteneur parent (.tab-content) pour ne modifier que les éléments à l'intérieur
+                const parentTab = button.closest('.tab-content');
                 
-                // Retirer la classe active de tous les boutons et contenus
-                subTabButtons.forEach(btn => btn.classList.remove('active'));
-                subTabContents.forEach(content => content.classList.remove('active'));
+                // Retirer la classe active uniquement dans ce conteneur
+                parentTab.querySelectorAll('.sub-tab-button').forEach(btn => btn.classList.remove('active'));
+                parentTab.querySelectorAll('.sub-tab-content').forEach(content => content.classList.remove('active'));
                 
                 // Activer le bouton cliqué et son contenu
                 button.classList.add('active');
