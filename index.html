@@ -445,7 +445,7 @@
 
         .tab-button {
             flex: 1;
-            min-width: 200px;
+            min-width: 150px;
             padding: 15px 0;
             text-align: center;
             border-radius: var(--border-radius);
@@ -898,15 +898,13 @@
             <h2 class="section-title">Formation</h2>
             <div class="timeline">
                 
-                <!--CPE Lyon -->
                 <div class="timeline-item">
-                    <div class="timeline-date">2026 - 2029</div>
-                    <div class="timeline-title">Cycle Ingénieur IRC (Informatique Réseau de Communication)</div>
+                    <div class="timeline-date">2026 - 2029 (À venir)</div>
+                    <div class="timeline-title">Cycle Ingénieur Informatique et Réseaux (IRC)</div>
                     <div class="timeline-company">CPE Lyon (Villeurbanne, France)</div>
                     <p>Formation d'ingénieur en alternance (en continuité au sein du groupe Koesio). Approfondissement de l'ingénierie des systèmes, des architectures réseaux complexes et de la cybersécurité.</p>
                 </div>
 
-                <!-- BUT Informatique -->
                 <div class="timeline-item">
                     <div class="timeline-date">2023 - 2026</div>
                     <div class="timeline-title">BUT DACS (Déploiement d’Applications Communicantes et Sécurisées)</div>
@@ -951,6 +949,7 @@
                 <div class="tab-button active" data-target="iut">IUT Informatique (La Doua)</div>
                 <div class="tab-button" data-target="cpe">Cycle ingénieur (CPE)</div>
                 <div class="tab-button" data-target="alternance">Alternance (Koesio)</div>
+                <div class="tab-button" data-target="homelab">Projets Personnels (Homelab)</div>
             </div>
 
             <!-- CONTENU IUT (La Doua) -->
@@ -1316,9 +1315,69 @@
                         <span class="info-label" title="Informations">Zebra</span>
                         <p>Intervention sur site dans un environnement industriel hostile (chocs thermiques, forte humidité). Installation d'un PC étanche industriel (fanless) avec écran tactile durci et calibration matérielle d'une imprimante thermique Zebra reliée à l'ERP du client.</p>
                     </div>
-
                 </div>
             </div>
+
+            <!-- CONTENU HOMELAB (Projets Personnels) -->
+            <div id="homelab" class="tab-content">
+                <div class="project-section" data-comp="Déploiement Réseaux">
+                    <h4>
+                        Infrastructure Docker & Reverse Proxy
+                        <span class="comp-badge" data-comp="Déploiement Réseaux" style="background-color: var(--skill-network);" title="Voir la compétence 'Déploiement Réseaux'"></span>
+                        <span class="comp-label" style="background-color: var(--skill-system);">Système</span>
+                        <span class="info-label" title="Informations">Traefik</span>
+                        <span class="info-label" title="Informations">Portainer</span>
+                        <span class="info-label" title="Informations">VPS</span>
+                    </h4>
+                    <p>Administration d'un VPS hébergeant de multiples services conteneurisés gérés via Portainer. Déploiement de Traefik comme Reverse Proxy pour la gestion du routage et la génération automatique des certificats SSL/TLS via Let's Encrypt.</p>
+                </div>
+
+                <div class="project-section" data-comp="Déploiement Réseaux">
+                    <h4>
+                        Cybersécurité & Gestion des Accès
+                        <span class="comp-badge" data-comp="Travail en Équipe" style="background-color: var(--skill-monitoring);" title="Voir la compétence 'Supervision'"></span>
+                        <span class="comp-label" style="background-color: var(--skill-security);">Sécurité</span>
+                        <span class="info-label" title="Informations">CrowdSec</span>
+                        <span class="info-label" title="Informations">Vaultwarden</span>
+                    </h4>
+                    <p>Sécurisation active du serveur avec CrowdSec (IPS collaboratif) pour bloquer les attaques et le bruteforce. Auto-hébergement d'un gestionnaire de mots de passe Vaultwarden (Bitwarden) pour un contrôle total et sécurisé des accès personnels.</p>
+                </div>
+
+                <div class="project-section" data-comp="Déploiement Réseaux">
+                    <h4>
+                        Réseau Hybride & Services DNS
+                        <span class="comp-badge" data-comp="Déploiement Réseaux" style="background-color: var(--skill-network);" title="Voir la compétence 'Déploiement Réseaux'"></span>
+                        <span class="comp-label" style="background-color: var(--skill-network);">Réseau</span>
+                        <span class="info-label" title="Informations">VPN IPsec</span>
+                        <span class="info-label" title="Informations">Raspberry Pi</span>
+                        <span class="info-label" title="Informations">AdGuard</span>
+                    </h4>
+                    <p>Mise en place d'un tunnel VPN IPsec pour interconnecter le VPS Cloud avec mon infrastructure locale (Raspberry Pi). Déploiement d'AdGuard Home pour le filtrage DNS (Sinkhole) et le blocage des traqueurs à l'échelle du réseau.</p>
+                </div>
+
+                <div class="project-section" data-comp="Travail en Équipe">
+                    <h4>
+                        Supervision & Messagerie (Environnement de test)
+                        <span class="comp-badge" data-comp="Travail en Équipe" style="background-color: var(--skill-monitoring);" title="Voir la compétence 'Supervision'"></span>
+                        <span class="comp-label" style="background-color: var(--skill-monitoring);">Supervision</span>
+                        <span class="info-label" title="Informations">Netdata</span>
+                        <span class="info-label" title="Informations">Mailcow</span>
+                    </h4>
+                    <p>Monitoring en temps réel des performances matérielles et applicatives des différents services grâce à Netdata. Déploiement d'une stack Mailcow en environnement de test (laboratoire) pour appréhender l'administration complexe d'un serveur de messagerie complet.</p>
+                </div>
+
+                <div class="project-section" data-comp="Développer">
+                    <h4>
+                        Intégration d'Intelligence Artificielle
+                        <span class="comp-badge" data-comp="Développer" style="background-color: var(--skill-system);" title="Voir la compétence 'Développer'"></span>
+                        <span class="comp-label" style="background-color: var(--skill-cloud);">Innovation</span>
+                        <span class="info-label" title="Informations">Modèles IA</span>
+                        <span class="info-label" title="Informations">Agents personnalisables</span>
+                    </h4>
+                    <p>Veille technologique et intégration de modèles d'Intelligence Artificielle locaux (LLM) dans le but de créer et superviser des agents 100% personnalisables dédiés à l'automatisation des tâches.</p>
+                </div>
+            </div>
+
         </section>
 
         <!-- Section Contact -->
@@ -1326,19 +1385,26 @@
             <h2 class="section-title">Contact</h2>
             <p>Pour toute demande de renseignements ou de collaboration, n’hésitez pas à me contacter via le formulaire ci-dessous ou à consulter mon profil LinkedIn et mon CV.</p>
             <div class="contact-form">
-                <div class="form-group full-width">
-                    <label for="nom" class="form-label">Nom</label>
-                    <input type="text" id="nom" class="form-input" placeholder="Votre nom complet"/>
-                </div>
-                <div class="form-group full-width">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" class="form-input" placeholder="Votre adresse email"/>
-                </div>
-                <div class="form-group full-width">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea id="message" rows="6" class="form-input" placeholder="Votre message"></textarea>
-                </div>
-                <button type="submit" class="form-submit">Envoyer</button>
+                
+                <!-- Formulaire fonctionnel avec Formspree -->
+                <form action="https://formspree.io/f/mbgjrppq" method="POST">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                        <div class="form-group full-width">
+                            <label for="nom" class="form-label">Nom</label>
+                            <input type="text" id="nom" name="nom" class="form-input" placeholder="Votre nom complet" required/>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Votre adresse email" required/>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" rows="6" class="form-input" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Envoyer</button>
+                    </div>
+                </form>
+
             </div>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/guillaume-finot-83a122293/" target="_blank" class="social-icon">in</a>
@@ -1373,7 +1439,7 @@
     </footer>
 
     <script>
-        // Gestion des onglets principaux (IUT, CPE, Alternance)
+        // Gestion des onglets principaux (IUT, CPE, Alternance, Homelab)
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
 
