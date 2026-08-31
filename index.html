@@ -42,12 +42,12 @@
             --transition: all 0.3s ease;
 
             /* Couleurs pour les compétences (Harmonisées) */
-            --skill-system: #e74c3c;      /* Rouge - Développer / Système */
-            --skill-security: #f39c12;    /* Orange - Optimisation / Sécurité */
-            --skill-network: #3498db;     /* Bleu - Déploiement Réseaux */
-            --skill-database: #2ecc71;    /* Vert - Base de Données */
-            --skill-cloud: #9b59b6;       /* Violet - Recueil de Besoins / Innovation */
-            --skill-monitoring: #34495e;  /* Gris foncé - Travail en Équipe / Supervision */
+            --skill-system: #e74c3c;      
+            --skill-security: #f39c12;    
+            --skill-network: #3498db;     
+            --skill-database: #2ecc71;    
+            --skill-cloud: #9b59b6;       
+            --skill-monitoring: #34495e;  
         }
 
         * {
@@ -668,6 +668,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 25px;
             margin-top: 30px;
+            width: 100%;
         }
 
         .form-group {
@@ -862,28 +863,28 @@
             <p>Au cours de ma formation et de mon expérience en alternance, j'ai développé un ensemble de compétences essentielles pour mener à bien des projets informatiques et réseaux.</p>
             <div class="skills-grid">
                 <div id="comp-Développer" class="skill-category skill-system">
-                    <h3>Développer / Système</h3>
-                    <p>Concevoir et développer sur mesure des solutions informatiques : de la programmation aux tests et à l’intégration, en choisissant les langages adaptés.</p>
+                    <h3>Développer</h3>
+                    <p>Concevoir et développer sur mesure des solutions informatiques : de la programmation aux tests et à l’intégration, en choisissant les langages adaptés..</p>
                 </div>
                 <div id="comp-Optimisation" class="skill-category skill-security">
-                    <h3>Optimisation / Sécurité</h3>
-                    <p>Optimiser et développer des applications informatiques en fonction du temps d’exécution, de la précision et de la consommation des ressources.</p>
+                    <h3>Optimisation</h3>
+                    <p>Optimiser et développer des applications informatiques en fonction du temps d’exécution, de la précision et de la consommation de ressources..</p>
                 </div>
                 <div id="comp-Déploiement-Réseaux" class="skill-category skill-network">
                     <h3>Déploiement Réseaux</h3>
-                    <p>Assurer l’installation, la configuration et la maintenance opérationnelle des infrastructures, services et réseaux, afin d’optimiser le SI de l’organisation.</p>
+                    <p>Assurer l’installation, la configuration et la maintenance opérationnelle des infrastructures, services et réseaux, afin d’optimiser le système informatique de l’organisation.</p>
                 </div>
                 <div id="comp-Base-de-Données" class="skill-category skill-database">
                     <h3>Base de Données</h3>
-                    <p>Concevoir, administrer et exploiter une base de données d'entreprise pour fournir des informations décisionnelles pertinentes.</p>
+                    <p>Concevoir, administrer et exploiter une base de données d'entreprise pour fournir des informations décisionnelles au sein d'une organisation</p>
                 </div>
                 <div id="comp-Recueil-de-Besoins" class="skill-category skill-cloud">
-                    <h3>Besoins / Innovation</h3>
-                    <p>Piloter des projets informatiques en analysant la chaîne de valeur client pour répondre aux besoins utilisateurs et innover.</p>
+                    <h3>Recueil de Besoins</h3>
+                    <p>Piloter des projets informatiques (classiques ou agiles) en analysant la chaîne de valeur client pour répondre aux besoins utilisateurs.</p>
                 </div>
                 <div id="comp-Travail-en-Équipe" class="skill-category skill-monitoring">
-                    <h3>Équipe / Supervision</h3>
-                    <p>Développer et mobiliser des compétences en communication et collaboration pour un travail d’équipe informatique et un monitoring efficace.</p>
+                    <h3>Travail en Équipe</h3>
+                    <p>Développer et mobiliser des compétences en communication et collaboration pour un travail d’équipe informatique efficace.</p>
                 </div>
             </div>
         </section>
@@ -1209,7 +1210,7 @@
                     <div class="sub-tab-button" data-target="alt-annee2">2ème Année (Projets & Autonomie)</div>
                 </div>
 
-                <!-- CONTENU 1ÈRE ANNÉE (Avec tes 6 projets originaux) -->
+                <!-- CONTENU 1ÈRE ANNÉE -->
                 <div id="alt-annee1" class="sub-tab-content active">
                     
                     <div class="project-section" style="border-left-color: var(--skill-monitoring);">
@@ -1511,28 +1512,24 @@
         <section id="contact" class="contact">
             <h2 class="section-title">Contact</h2>
             <p>Pour toute demande de renseignements ou de collaboration, n’hésitez pas à me contacter via le formulaire ci-dessous ou à consulter mon profil LinkedIn et mon CV.</p>
-            <div class="contact-form">
-                
-                <!-- Formulaire fonctionnel avec Formspree -->
-                <form action="https://formspree.io/f/mbgjrppq" method="POST" style="width: 100%;">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
-                        <div class="form-group full-width">
-                            <label for="nom" class="form-label">Nom</label>
-                            <input type="text" id="nom" name="nom" class="form-input" placeholder="Votre nom complet" required/>
-                        </div>
-                        <div class="form-group full-width">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="Votre adresse email" required/>
-                        </div>
-                        <div class="form-group full-width">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" rows="6" class="form-input" placeholder="Votre message" required></textarea>
-                        </div>
-                        <button type="submit" class="form-submit">Envoyer le message</button>
-                    </div>
-                </form>
+            
+            <!-- Formulaire fonctionnel avec Formspree -->
+            <form action="https://formspree.io/f/mbgjrppq" method="POST" class="contact-form">
+                <div class="form-group full-width">
+                    <label for="nom" class="form-label">Nom</label>
+                    <input type="text" id="nom" name="nom" class="form-input" placeholder="Votre nom complet" required/>
+                </div>
+                <div class="form-group full-width">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Votre adresse email" required/>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" rows="6" class="form-input" placeholder="Votre message" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Envoyer le message</button>
+            </form>
 
-            </div>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/guillaume-finot-83a122293/" target="_blank" class="social-icon">in</a>
                 <a href="https://Guiguixx.github.io/" target="_blank" class="social-icon">CV</a>
