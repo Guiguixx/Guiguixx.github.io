@@ -11,7 +11,8 @@
     <meta name="robots" content="index,follow,max-image-preview:large">
     
     <!-- Favicons -->
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
     <!-- Open Graph (LinkedIn, etc.) -->
@@ -1442,6 +1443,19 @@
             <!-- CONTENU HOMELAB (Projets Personnels) -->
             <!-- ============================== -->
             <div id="homelab" class="tab-content">
+                <div class="project-section" style="border-left-color: var(--skill-cloud);">
+                    <h4>
+                        MarketCompose : site d'aide à l'auto-hébergement
+                        <span class="comp-badge" data-comp="Développer" style="background-color: var(--skill-cloud);"></span>
+                        <span class="comp-label" style="background-color: var(--skill-cloud);">Projet en ligne</span>
+                        <span class="info-label">Astro</span>
+                        <span class="info-label">Docker</span>
+                        <span class="info-label">GitHub Actions</span>
+                    </h4>
+                    <p>Conception et hébergement de marketcompose.com, un site bilingue (français / anglais) qui aide à monter son propre serveur : configurateur qui génère une installation Docker complète et sécurisée (Traefik, CrowdSec, sauvegardes), fiches d'applications, décodeur d'erreurs et guides pas à pas. Publication automatique sur mon VPS à chaque modification.</p>
+                    <a href="https://marketcompose.com/fr/" class="details-link" target="_blank" rel="noopener">Voir le site &rarr;</a>
+                </div>
+
                 <div class="project-section" style="border-left-color: var(--skill-network);">
                     <h4>
                         Infrastructure Docker & Reverse Proxy
